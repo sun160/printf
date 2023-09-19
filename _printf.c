@@ -35,7 +35,7 @@ int matchFun(const char *format, va_list args, formatSelect *funs)
 				}
 				j++;
 			}
-			if (!funs[j].ptr)
+			if (funs[j].ptr == NULL)
 			{
 				print_count += _putchar('%');
 				print_count += _putchar(format[i]);
@@ -67,7 +67,7 @@ int _printf(const char *format, ...)
 		{NULL, NULL}
 	};
 
-	if (!format || (format[0] == '%' && format[1] == '\0'))
+	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
 
 	va_start(args, format);
