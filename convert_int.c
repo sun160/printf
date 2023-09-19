@@ -8,7 +8,7 @@
 
 int convert_int(va_list args)
 {
-	int n = va_arg(args, int);
+	int num = va_arg(args, int);
 	int print_count = 0, num_digits = 0, t = num, j = 1, div = 1;
 
 	if (num < 0)
