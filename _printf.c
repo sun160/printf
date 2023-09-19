@@ -18,7 +18,7 @@ int matchFun(const char *format, va_list args, formatSelect *funs)
 		{
 			i++;
 
-			while (funs[j].ptr)
+			while (funs[j].ptr != NULL )
 			{
 				if (format[i] == '%')
 				{
