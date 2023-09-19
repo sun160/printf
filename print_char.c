@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * print_ch - prints out given char
- * @list: list given
- * Return: number of char printed
+ * print_ch - print ch
+ * @args: list given
+ * Return: char num
 */
 
-int print_char(va_list list)
+int print_char(va_list args)
 {
-	return (_putchar(va_arg(list, int)));
+	return (_putchar(va_arg(args, int)));
 }
