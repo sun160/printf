@@ -8,35 +8,28 @@
 
 int convert_int(va_list args)
 {
-	int num = va_arg(args, int);
-	int print_count = 0, num_digits = 0, t = num, j = 1, div = 1;
+	int print_count = 0, digit, temp ,num, div = 1;
 
+	num = va_arg(args, int);
+	
 	if (num < 0)
 	{
 		print_count += _putchar('-');
 		num = -num;
 	}
-	if (num == 0)
+	temp = num;
+
+	while (temp / div > 9)
 	{
-		print_count += _putchar('0');
-		return (print_count);
-	}
-
-
-	while (t != 0)
-	{
-		t /= 10;
-		num_digits++;
-	}
-
-	for (; j < num_digits; j++)
 		div *= 10;
+	}
+
 	while (div != 0)
 	{
-		int digit = num / div;
+		digit = temp / div;
 
 		print_count += _putchar(digit + '0');
-		num %= div;
+		temp %= div;
 		div /= 10;
 	}
 	return (print_count);
