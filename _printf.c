@@ -64,6 +64,7 @@ int _printf(const char *format, ...)
 		{"s", print_string},
 		{"d", convert_int},
 		{"i", convert_int},
+		{"b", print_binary},
 		{NULL, NULL}
 	};
 
