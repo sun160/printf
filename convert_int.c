@@ -8,7 +8,8 @@
 
 int convert_int(va_list args)
 {
-	int print_count = 0, digit, temp ,num, div = 1;
+	int print_count = 0, digit, num, div = 1;
+	unsigned int temp;
 
 	num = va_arg(args, int);
 	
