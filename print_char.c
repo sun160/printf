@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_ch - print ch
+ * print_char - print ch
  * @args: list given
  * Return: char num
 */
