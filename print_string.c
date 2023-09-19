@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * print_str - print string
+ * print_string - print string
  * @args: args list
  * Return: String
  **/
 
-int print_str(va_list args)
+int print_string(va_list args)
 {
 	int print_count = 0;
 	char *str = va_arg(args, char*);
