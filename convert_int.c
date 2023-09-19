@@ -12,7 +12,6 @@ int convert_int(va_list args)
 	unsigned int temp;
 
 	num = va_arg(args, int);
-	
 	if (num < 0)
 	{
 		print_count += _putchar('-');
